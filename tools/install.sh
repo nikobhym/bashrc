@@ -23,7 +23,7 @@ fi
 _omb_install_print_version() {
   local OMB_VERSINFO
   OMB_VERSINFO=(1 0 0 0 master noarch)
-  printf '%s\n' 'Install script for Oh-My-Bash (https://github.com/ohmybash/oh-my-bash)'
+  printf '%s\n' 'Install script for Oh-My-Bash ()'
   printf 'oh-my-bash, version %s.%s.%s(%s)-%s (%s)\n' "${OMB_VERSINFO[@]}"
 }
 
