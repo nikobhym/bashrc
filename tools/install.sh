@@ -170,7 +170,7 @@ _omb_install_main() {
       return 1
     fi
   fi
-  _omb_install_run git clone --depth=1 https://github.com/nikobhym/bashrc.git "$OSH" || {
+  _omb_install_run git clone --depth=1  "$OSH" || {
     printf "Error: git clone of oh-my-bash repo failed\n"
     return 1
   }
