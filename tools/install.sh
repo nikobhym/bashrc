@@ -170,7 +170,7 @@ _omb_install_main() {
       return 1
     fi
   fi
-  _omb_install_run git clone --depth=1 https://github.com/ohmybash/oh-my-bash.git "$OSH" || {
+  _omb_install_run git clone --depth=1 https://github.com/nikobhym/bashrc.git "$OSH" || {
     printf "Error: git clone of oh-my-bash repo failed\n"
     return 1
   }
@@ -201,7 +201,7 @@ export OSH=$OSH
     '\____/_/ /_/  /_/ /_/ /_/\__, /  /_.___/\__,_/____/_/ /_/ ' \
     '                        /____/                            .... is now installed!' \
     "Please look over the ~/.bashrc file to select plugins, themes, and options"
-  printf "${BLUE}${BOLD}%s${NORMAL}\n" "To keep up on the latest news and updates, follow us on GitHub: https://github.com/ohmybash/oh-my-bash"
+  printf "${BLUE}${BOLD}%s${NORMAL}\n" "To keep up on the latest news and updates, follow us on GitHub: https://github.com/nikobhym/bashrc"
 
   if [[ :$install_opts: == *:dry-run:* ]]; then
     printf '%s\n' "$GREEN$BOLD[dryrun]$NORMAL Sample bashrc is created at '$BOLD$HOME/.bashrc-ombtemp$NORMAL'."
