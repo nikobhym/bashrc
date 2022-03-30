@@ -6,7 +6,7 @@ if [ -z "${BASH_VERSION-}" ]; then
   printf "Error: Bash 3.2 or higher is required for Oh My Bash.\n"
   printf "Error: Install Bash and try running this installation script with Bash.\n"
   if command -v bash >/dev/null 2>&1; then
-    printf 'Example: \033[31;1mbash\033[0;34m -c "$(curl -fsSL https://raw.githubusercontent.com/nikobhym/bashrc/master/tools/install.sh)"\n'
+    printf 'Example: \033[31;1mbash\033[0;34m -c "$(curl -fsSL )"\n'
   fi
   return 1 >/dev/null 2>&1 || exit 1
 fi
@@ -170,7 +170,7 @@ _omb_install_main() {
       return 1
     fi
   fi
-  _omb_install_run git clone --depth=1 https://github.com/nikobhym/bashrc.git "$OSH" || {
+  _omb_install_run git clone --depth=1  "$OSH" || {
     printf "Error: git clone of oh-my-bash repo failed\n"
     return 1
   }
@@ -201,7 +201,7 @@ export OSH=$OSH
     '\____/_/ /_/  /_/ /_/ /_/\__, /  /_.___/\__,_/____/_/ /_/ ' \
     '                        /____/                            .... is now installed!' \
     "Please look over the ~/.bashrc file to select plugins, themes, and options"
-  printf "${BLUE}${BOLD}%s${NORMAL}\n" "To keep up on the latest news and updates, follow us on GitHub: https://github.com/nikobhym/bashrc"
+  printf "${BLUE}${BOLD}%s${NORMAL}\n" "To keep up on the latest news and updates, follow us on GitHub: "
 
   if [[ :$install_opts: == *:dry-run:* ]]; then
     printf '%s\n' "$GREEN$BOLD[dryrun]$NORMAL Sample bashrc is created at '$BOLD$HOME/.bashrc-ombtemp$NORMAL'."
